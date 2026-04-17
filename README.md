@@ -1,7 +1,3 @@
-<p align="center">
-  <strong>&lt;MHA /&gt;</strong>
-</p>
-
 <h1 align="center">Muhammad Hammad Asher — Portfolio Website</h1>
 
 <p align="center">
