@@ -1,5 +1,5 @@
-<h1 align="center">Muhammad Hammad Asher — Portfolio Website</h1>
-
+<h1 align="center">Portfolio Website</h1>
+<h1 align="center">Muhammad Hammad Asher</h1>
 <p align="center">
   A modern, responsive, single-page developer portfolio built with vanilla HTML, CSS & JavaScript.<br/>
   Designed to showcase projects, skills, education, and certifications for internship applications.
