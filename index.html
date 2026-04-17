@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Hammad Asher | Software Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Muhammad Hammad Asher — Software Engineering student at Bahria University, specializing in AI, Data Science, and Full-Stack Development. Explore projects, skills, and experience." />
+  <meta name="keywords" content="Muhammad Hammad Asher, Software Engineer, Portfolio, AI, Data Science, Full-Stack Developer, Bahria University" />
+  <meta name="author" content="Muhammad Hammad Asher" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muhammad Hammad Asher | Software Engineer Portfolio" />
+  <meta property="og:description" content="Software Engineering student passionate about AI, Data Science, and Full-Stack Development." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MHA<span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certificates" class="nav-link" data-section="certificates">Certificates</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-effects">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting" id="heroGreeting">
+          <span class="greeting-wave">👋</span> Hello, I'm
+        </p>
+        <h1 class="hero-name">
+          <span class="name-line">Muhammad</span>
+          <span class="name-line name-accent">Hammad Asher</span>
+        </h1>
+        <p class="hero-tagline">
+          <span class="tagline-item"><i class="fas fa-laptop-code"></i> Software Engineering Student</span>
+          <span class="tagline-divider">|</span>
+          <span class="tagline-item"><i class="fas fa-brain"></i> AI & Data Science Enthusiast</span>
+          <span class="tagline-divider">|</span>
+          <span class="tagline-item"><i class="fas fa-code"></i> Full-Stack Developer</span>
+        </p>
+        <p class="hero-location">
+          <i class="fas fa-map-marker-alt"></i> Gulshan-e-Iqbal, Karachi, Pakistan
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <i class="fas fa-folder-open"></i> View Projects
+          </a>
+          <a href="#" class="btn btn-outline" id="downloadResume">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="tel:+923367599691" class="social-link" aria-label="Phone" title="Call Me">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="mailto:hammadasher2@gmail.com" class="social-link" aria-label="Email" title="Email Me">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://linkedin.com/in/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/" class="social-link" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-window">
+          <div class="code-header">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="code-title">about_me.py</span>
+          </div>
+          <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-class">SoftwareEngineer</span>:
+
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):
+        self.name = <span class="code-string">"Hammad Asher"</span>
+        self.role = <span class="code-string">"Student Developer"</span>
+        self.interests = [
+            <span class="code-string">"AI/ML"</span>,
+            <span class="code-string">"Full-Stack"</span>,
+            <span class="code-string">"Data Science"</span>
+        ]
+        self.university = <span class="code-string">"Bahria University"</span>
+
+    <span class="code-keyword">def</span> <span class="code-func">say_hi</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">print</span>(<span class="code-string">"Let's build something amazing!"</span>)
+
+
+<span class="code-comment"># Let's go! 🚀</span>
+me = SoftwareEngineer()
+me.say_hi()</code></pre>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="section-number">01.</span> About Me
+      </h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-description">
+            Motivated Software Engineering student at <strong>Bahria University Karachi</strong> (2024–2028) with hands-on experience in full-stack development, systems programming, and machine learning model training, seeking a software development or data science internship to apply and expand my skills in a professional environment.
+          </p>
+          <p class="about-description">
+            Passionate about building impactful applications and eager to contribute to a collaborative engineering team.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fas fa-code"></i></div>
+              <div class="highlight-info">
+                <span class="highlight-number">5+</span>
+                <span class="highlight-label">Projects Built</span>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="highlight-info">
+                <span class="highlight-number">3.63</span>
+                <span class="highlight-label">CGPA / 4.00</span>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fas fa-certificate"></i></div>
+              <div class="highlight-info">
+                <span class="highlight-number">1+</span>
+                <span class="highlight-label">Certifications</span>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="highlight-info">
+                <span class="highlight-number">10+</span>
+                <span class="highlight-label">Technologies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-info-cards">
+          <div class="info-card">
+            <i class="fas fa-user-graduate"></i>
+            <div>
+              <strong>Degree</strong>
+              <span>BSE Software Engineering</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-university"></i>
+            <div>
+              <strong>University</strong>
+              <span>Bahria University, Karachi</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Location</strong>
+              <span>Karachi, Pakistan</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-briefcase"></i>
+            <div>
+              <strong>Seeking</strong>
+              <span>Internship Opportunities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="section-number">02.</span> Education
+      </h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-badge">Current</div>
+            <h3>Bahria University, Karachi</h3>
+            <p class="timeline-degree">Bachelor of Software Engineering (BSE)</p>
+            <p class="timeline-date"><i class="fas fa-calendar-alt"></i> 2024 – Present (Expected 2028)</p>
+            <div class="timeline-gpa">
+              <span class="gpa-label">CGPA</span>
+              <div class="gpa-bar">
+                <div class="gpa-fill" data-gpa="90.75"></div>
+              </div>
+              <span class="gpa-value">3.63 / 4.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-badge badge-secondary">Ongoing</div>
+            <h3>Saylani Mass IT Training (SMIT)</h3>
+            <p class="timeline-degree">Diploma in AI & Data Science</p>
+            <p class="timeline-date"><i class="fas fa-calendar-alt"></i> July 2025 – Present</p>
+            <div class="timeline-tags">
+              <span class="tag">Artificial Intelligence</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Data Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="section-number">03.</span> Skills & Technologies
+      </h2>
+      <div class="skills-grid">
+        <!-- Languages & Web -->
+        <div class="skill-category glass-card">
+          <div class="skill-category-header">
+            <div class="skill-icon-wrap"><i class="fas fa-code"></i></div>
+            <h3>Languages & Web</h3>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge" data-skill="cpp"><i class="fas fa-c"></i> C++</span>
+            <span class="skill-badge" data-skill="python"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-badge" data-skill="java"><i class="fab fa-java"></i> Java</span>
+            <span class="skill-badge" data-skill="csharp"><i class="fab fa-microsoft"></i> C# / .NET</span>
+            <span class="skill-badge" data-skill="javascript"><i class="fab fa-js-square"></i> JavaScript</span>
+            <span class="skill-badge" data-skill="mysql"><i class="fas fa-database"></i> MySQL</span>
+            <span class="skill-badge" data-skill="sqlserver"><i class="fas fa-database"></i> SQL Server</span>
+            <span class="skill-badge" data-skill="git"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-badge" data-skill="github"><i class="fab fa-github"></i> GitHub</span>
+          </div>
+        </div>
+
+        <!-- Data Science & ML -->
+        <div class="skill-category glass-card">
+          <div class="skill-category-header">
+            <div class="skill-icon-wrap"><i class="fas fa-brain"></i></div>
+            <h3>Data Science & ML</h3>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge"><i class="fas fa-cogs"></i> scikit-learn</span>
+            <span class="skill-badge"><i class="fas fa-network-wired"></i> TensorFlow / Keras</span>
+            <span class="skill-badge"><i class="fas fa-project-diagram"></i> Deep Learning (CNNs, RNNs)</span>
+            <span class="skill-badge"><i class="fas fa-chart-line"></i> Supervised Learning</span>
+            <span class="skill-badge"><i class="fas fa-sitemap"></i> Unsupervised Learning</span>
+            <span class="skill-badge"><i class="fas fa-chart-bar"></i> Regression & Classification</span>
+            <span class="skill-badge"><i class="fas fa-music"></i> Sound/Audio Model Training</span>
+            <span class="skill-badge"><i class="fas fa-sliders-h"></i> Model Evaluation & Tuning</span>
+            <span class="skill-badge"><i class="fas fa-calculator"></i> NumPy</span>
+            <span class="skill-badge"><i class="fas fa-table"></i> pandas</span>
+            <span class="skill-badge"><i class="fas fa-chart-area"></i> Matplotlib</span>
+            <span class="skill-badge"><i class="fab fa-docker"></i> Docker</span>
+            <span class="skill-badge"><i class="fas fa-desktop"></i> Streamlit</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-category glass-card">
+          <div class="skill-category-header">
+            <div class="skill-icon-wrap"><i class="fas fa-users"></i></div>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge soft"><i class="fas fa-lightbulb"></i> Problem-Solving</span>
+            <span class="skill-badge soft"><i class="fas fa-handshake"></i> Team Collaboration</span>
+            <span class="skill-badge soft"><i class="fas fa-sync-alt"></i> Adaptability</span>
+            <span class="skill-badge soft"><i class="fas fa-clock"></i> Time Management</span>
+            <span class="skill-badge soft"><i class="fas fa-crown"></i> Leadership</span>
+            <span class="skill-badge soft"><i class="fas fa-search"></i> Analytical Thinking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="section-number">04.</span> Featured Projects
+      </h2>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="desktop">Desktop</button>
+        <button class="filter-btn" data-filter="data">Data Science</button>
+        <button class="filter-btn" data-filter="java">Java</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project 1 -->
+        <div class="project-card glass-card" data-category="web">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-film"></i></div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-link" title="Live Demo" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Cinema Schedule Website</h3>
+          <p class="project-desc">Built responsive cinema site with dynamic showtime filtering and seat highlighting using local JSON data and modern web technologies.</p>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Fetch API</span>
+            <span>JSON</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card" data-category="desktop">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-question-circle"></i></div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">C# Quiz Application</h3>
+          <p class="project-desc">Windows Forms quiz app with XML question loading, countdown timer, and real-time scoring system for interactive learning.</p>
+          <div class="project-tech">
+            <span>C#</span>
+            <span>Windows Forms</span>
+            <span>XML</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card" data-category="java">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-utensils"></i></div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Java Food Delivery Simulator</h3>
+          <p class="project-desc">Console-based food delivery system with OOP design, multithreading for concurrent operations, and MySQL database storage.</p>
+          <div class="project-tech">
+            <span>Java</span>
+            <span>OOP</span>
+            <span>Multithreading</span>
+            <span>MySQL</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-card" data-category="desktop">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-ticket-alt"></i></div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">ZipIT-Smart</h3>
+          <p class="project-desc">Ticketing system using custom linked-list-based Queue data structure with priority routing for efficient ticket management.</p>
+          <div class="project-tech">
+            <span>C#</span>
+            <span>Data Structures</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-card" data-category="data">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-link" title="Live Demo" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Weather & Finance ETL Dashboard</h3>
+          <p class="project-desc">ETL pipeline with real-time API data for 15K+ entities; stock indicators + weather dashboards with interactive visualizations.</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Streamlit</span>
+            <span>scikit-learn</span>
+            <span>pandas</span>
+            <span>Plotly</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATES ========== -->
+  <section class="section" id="certificates">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="section-number">05.</span> Certifications
+      </h2>
+      <div class="certificates-grid">
+        <div class="certificate-card glass-card">
+          <div class="cert-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="cert-content">
+            <h3>Modern AI – Introduction to Modern AI</h3>
+            <p class="cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</p>
+            <p class="cert-desc">AI/ML fundamentals, LLM prompting techniques, multimodal AI systems, and chatbot collaboration strategies.</p>
+            <div class="cert-tags">
+              <span>AI/ML</span>
+              <span>LLM</span>
+              <span>Multimodal AI</span>
+              <span>Chatbots</span>
+            </div>
+            <a href="#" class="btn btn-sm" target="_blank">
+              <i class="fas fa-external-link-alt"></i> View Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="section-number">06.</span> Get In Touch
+      </h2>
+      <p class="section-subtitle">
+        I'm currently looking for internship opportunities. Whether you have a question or just want to say hi, feel free to reach out!
+      </p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item glass-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:hammadasher2@gmail.com">hammadasher2@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+923367599691">+92-336-7599691</a>
+            </div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://linkedin.com/in/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+            </div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/" target="_blank" rel="noopener">View GitHub Profile</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form glass-card" id="contactForm">
+          <div class="form-group">
+            <label for="formName">Your Name</label>
+            <input type="text" id="formName" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="formEmail">Your Email</label>
+            <input type="email" id="formEmail" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="formMessage">Message</label>
+            <textarea id="formMessage" name="message" rows="5" placeholder="Hey Hammad, I'd love to chat about..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>MHA<span class="logo-bracket"> /&gt;</span>
+        </div>
+        <div class="footer-socials">
+          <a href="tel:+923367599691" aria-label="Phone"><i class="fas fa-phone"></i></a>
+          <a href="mailto:hammadasher2@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="footer-text">
+          Designed & Built by <strong>Muhammad Hammad Asher</strong>
+        </p>
+        <p class="footer-copyright">
+          &copy; <span id="currentYear"></span> All rights reserved. | Last updated: <span id="lastUpdated"></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
