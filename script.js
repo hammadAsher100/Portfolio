@@ -182,8 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('downloadResume').addEventListener('click', (e) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = 'Hammad_Asher_Resume.pdf';
-    link.download = 'Hammad_Asher_Resume.pdf';
+    link.href = 'resume.pdf';
+    link.download = 'resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
