@@ -181,7 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Download Resume ----
   document.getElementById('downloadResume').addEventListener('click', (e) => {
     e.preventDefault();
-    alert('Resume PDF will be available once you add your resume file. Place it as "resume.pdf" in the project folder and update the link.');
+    const link = document.createElement('a');
+    link.href = 'Hammad_Asher_Resume.pdf';
+    link.download = 'Hammad_Asher_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
 
   // ---- Footer Date ----
