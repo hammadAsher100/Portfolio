@@ -1,9 +1,5 @@
-<p align="center">
-  <strong>&lt;MHA /&gt;</strong>
-</p>
-
-<h1 align="center">Muhammad Hammad Asher — Portfolio Website</h1>
-
+<h1 align="center">Portfolio Website</h1>
+<h1 align="center">Muhammad Hammad Asher</h1>
 <p align="center">
   A modern, responsive, single-page developer portfolio built with vanilla HTML, CSS & JavaScript.<br/>
   Designed to showcase projects, skills, education, and certifications for internship applications.
@@ -14,8 +10,8 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
 </p>
+Visit Website: https://hammadasher100.github.io/Portfolio/
 
----
 
 ## ✨ Features
 
