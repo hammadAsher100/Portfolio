@@ -12,11 +12,42 @@
   <meta property="og:title" content="Muhammad Hammad Asher | Software Engineer Portfolio" />
   <meta property="og:description" content="Software Engineering student passionate about AI, Data Science, and Full-Stack Development." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hammadasher100.github.io/Portfolio/og-preview.png" />
+  <meta property="og:url" content="https://hammadasher100.github.io/Portfolio/" />
 
-  <!-- Fonts -->
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://hammadasher100.github.io/Portfolio/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/Portfolio/favicon.png" />
+  <link rel="apple-touch-icon" href="/Portfolio/apple-touch-icon.png" />
+
+  <!-- Fonts with preloading -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Hammad Asher",
+    "jobTitle": "Software Engineering Student",
+    "url": "https://hammadasher100.github.io/Portfolio/",
+    "email": "hammadasher2@gmail.com",
+    "sameAs": [
+      "https://linkedin.com/in/hammadAsher100",
+      "https://github.com/hammadAsher100"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Bahria University"
+    },
+    "knowsAbout": ["Software Engineering", "Artificial Intelligence", "Data Science", "Full-Stack Development"]
+  }
+  </script>
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -24,6 +55,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ========== NAVIGATION ========== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
@@ -68,11 +102,9 @@
           <span class="name-line name-accent">Hammad Asher</span>
         </h1>
         <p class="hero-tagline">
-          <span class="tagline-item"><i class="fas fa-laptop-code"></i> Software Engineering Student</span>
-          <span class="tagline-divider">|</span>
-          <span class="tagline-item"><i class="fas fa-brain"></i> AI & Data Science Enthusiast</span>
-          <span class="tagline-divider">|</span>
-          <span class="tagline-item"><i class="fas fa-code"></i> Full-Stack Developer</span>
+          <span class="tagline-item typing-text" id="typingText">
+            <i class="fas fa-laptop-code"></i> <span id="typedRole">Software Engineering Student</span>
+          </span>
         </p>
         <p class="hero-location">
           <i class="fas fa-map-marker-alt"></i> Gulshan-e-Iqbal, Karachi, Pakistan
@@ -84,7 +116,7 @@
           <a href="#projects" class="btn btn-secondary">
             <i class="fas fa-folder-open"></i> View Projects
           </a>
-          <a href="#" class="btn btn-outline" id="downloadResume">
+          <a href="resume.pdf" class="btn btn-outline" id="downloadResume" download="Muhammad_Hammad_Asher_Resume.pdf">
             <i class="fas fa-download"></i> Download Resume
           </a>
         </div>
@@ -95,10 +127,10 @@
           <a href="mailto:hammadasher2@gmail.com" class="social-link" aria-label="Email" title="Email Me">
             <i class="fas fa-envelope"></i>
           </a>
-          <a href="https://linkedin.com/in/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
+          <a href="https://linkedin.com/in/hammadAsher100" class="social-link" aria-label="LinkedIn profile" title="LinkedIn" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com/" class="social-link" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
+          <a href="https://github.com/hammadAsher100" class="social-link" aria-label="GitHub profile" title="GitHub" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github"></i>
           </a>
         </div>
@@ -133,8 +165,8 @@ me.say_hi()</code></pre>
         </div>
       </div>
     </div>
-    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-      <div class="scroll-mouse">
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down to about section">
+      <div class="scroll-mouse" role="img" aria-label="Mouse scroll indicator">
         <div class="scroll-wheel"></div>
       </div>
       <span>Scroll Down</span>
@@ -143,18 +175,28 @@ me.say_hi()</code></pre>
 
   <!-- ========== ABOUT ========== -->
   <section class="section" id="about">
+    <span id="main-content"></span>
     <div class="container">
       <h2 class="section-title">
         <span class="section-number">01.</span> About Me
       </h2>
       <div class="about-grid">
         <div class="about-text">
+          <div class="about-profile-photo">
+            <img src="assets/hammad.jpg" alt="Muhammad Hammad Asher profile photo" loading="lazy" />
+          </div>
           <p class="about-description">
             Motivated Software Engineering student at <strong>Bahria University Karachi</strong> (2024–2028) with hands-on experience in full-stack development, systems programming, and machine learning model training, seeking a software development or data science internship to apply and expand my skills in a professional environment.
           </p>
           <p class="about-description">
             Passionate about building impactful applications and eager to contribute to a collaborative engineering team.
           </p>
+          
+          <!-- GitHub Stats -->
+          <div class="github-stats">
+            <h4>GitHub Activity</h4>
+            <img src="https://github-readme-stats.vercel.app/api?username=hammadAsher100&show_icons=true&theme=dark&hide_border=true&bg_color=0a0e17&title_color=3b82f6&icon_color=3b82f6&text_color=e2e8f0" alt="GitHub stats for Hammad Asher" loading="lazy" />
+          </div>
           <div class="about-highlights">
             <div class="highlight-card">
               <div class="highlight-icon"><i class="fas fa-code"></i></div>
@@ -278,16 +320,61 @@ me.say_hi()</code></pre>
             <div class="skill-icon-wrap"><i class="fas fa-code"></i></div>
             <h3>Languages & Web</h3>
           </div>
-          <div class="skill-badges">
-            <span class="skill-badge" data-skill="cpp"><i class="fas fa-c"></i> C++</span>
-            <span class="skill-badge" data-skill="python"><i class="fab fa-python"></i> Python</span>
-            <span class="skill-badge" data-skill="java"><i class="fab fa-java"></i> Java</span>
-            <span class="skill-badge" data-skill="csharp"><i class="fab fa-microsoft"></i> C# / .NET</span>
-            <span class="skill-badge" data-skill="javascript"><i class="fab fa-js-square"></i> JavaScript</span>
-            <span class="skill-badge" data-skill="mysql"><i class="fas fa-database"></i> MySQL</span>
-            <span class="skill-badge" data-skill="sqlserver"><i class="fas fa-database"></i> SQL Server</span>
-            <span class="skill-badge" data-skill="git"><i class="fab fa-git-alt"></i> Git</span>
-            <span class="skill-badge" data-skill="github"><i class="fab fa-github"></i> GitHub</span>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name"><i class="fas fa-c"></i> C++</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-percent="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-percent="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name"><i class="fab fa-java"></i> Java</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-percent="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name"><i class="fab fa-microsoft"></i> C# / .NET</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-percent="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name"><i class="fab fa-js-square"></i> JavaScript</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-percent="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name"><i class="fas fa-database"></i> MySQL / SQL Server</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-percent="75"></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -352,11 +439,14 @@ me.say_hi()</code></pre>
       <div class="projects-grid" id="projectsGrid">
         <!-- Project 1 -->
         <div class="project-card glass-card" data-category="web">
+          <div class="project-thumbnail">
+            <img src="assets/projects/cinema-schedule.png" alt="Cinema Schedule Website preview" loading="lazy" />
+          </div>
           <div class="project-card-header">
             <div class="project-icon"><i class="fas fa-film"></i></div>
             <div class="project-links">
-              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" class="project-link" title="Live Demo" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/hammadAsher100/Cinema-Schedule-Website" class="project-link" aria-label="View Cinema Schedule Website on GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              <a href="https://hammadasher100.github.io/Cinema-Schedule-Website/" class="project-link" aria-label="View Cinema Schedule Website live demo" title="Live Demo" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <h3 class="project-title">Cinema Schedule Website</h3>
@@ -372,10 +462,13 @@ me.say_hi()</code></pre>
 
         <!-- Project 2 -->
         <div class="project-card glass-card" data-category="desktop">
+          <div class="project-thumbnail">
+            <img src="assets/projects/quiz-app.png" alt="C# Quiz Application preview" loading="lazy" />
+          </div>
           <div class="project-card-header">
             <div class="project-icon"><i class="fas fa-question-circle"></i></div>
             <div class="project-links">
-              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/hammadAsher100/CSharp-Quiz-Application" class="project-link" aria-label="View C# Quiz Application on GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <h3 class="project-title">C# Quiz Application</h3>
@@ -389,10 +482,13 @@ me.say_hi()</code></pre>
 
         <!-- Project 3 -->
         <div class="project-card glass-card" data-category="java">
+          <div class="project-thumbnail">
+            <img src="assets/projects/food-delivery.png" alt="Java Food Delivery Simulator preview" loading="lazy" />
+          </div>
           <div class="project-card-header">
             <div class="project-icon"><i class="fas fa-utensils"></i></div>
             <div class="project-links">
-              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/hammadAsher100/Java-Food-Delivery-Simulator" class="project-link" aria-label="View Java Food Delivery Simulator on GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <h3 class="project-title">Java Food Delivery Simulator</h3>
@@ -407,10 +503,13 @@ me.say_hi()</code></pre>
 
         <!-- Project 4 -->
         <div class="project-card glass-card" data-category="desktop">
+          <div class="project-thumbnail">
+            <img src="assets/projects/zipit-smart.png" alt="ZipIT-Smart ticketing system preview" loading="lazy" />
+          </div>
           <div class="project-card-header">
             <div class="project-icon"><i class="fas fa-ticket-alt"></i></div>
             <div class="project-links">
-              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/hammadAsher100/ZipIT-Smart" class="project-link" aria-label="View ZipIT-Smart on GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <h3 class="project-title">ZipIT-Smart</h3>
@@ -423,11 +522,14 @@ me.say_hi()</code></pre>
 
         <!-- Project 5 -->
         <div class="project-card glass-card" data-category="data">
+          <div class="project-thumbnail">
+            <img src="assets/projects/weather-finance.png" alt="Weather & Finance ETL Dashboard preview" loading="lazy" />
+          </div>
           <div class="project-card-header">
             <div class="project-icon"><i class="fas fa-chart-line"></i></div>
             <div class="project-links">
-              <a href="#" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" class="project-link" title="Live Demo" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/hammadAsher100/Weather-Finance-ETL-Dashboard" class="project-link" aria-label="View Weather & Finance ETL Dashboard on GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              <a href="https://weather-finance-dashboard.streamlit.app/" class="project-link" aria-label="View Weather & Finance ETL Dashboard live demo" title="Live Demo" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <h3 class="project-title">Weather & Finance ETL Dashboard</h3>
@@ -465,7 +567,7 @@ me.say_hi()</code></pre>
               <span>Multimodal AI</span>
               <span>Chatbots</span>
             </div>
-            <a href="#" class="btn btn-sm" target="_blank">
+            <a href="https://www.credly.com/badges/your-cisco-badge-id" class="btn btn-sm" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> View Certificate
             </a>
           </div>
@@ -503,18 +605,18 @@ me.say_hi()</code></pre>
             <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
             <div>
               <strong>LinkedIn</strong>
-              <a href="https://linkedin.com/in/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+              <a href="https://linkedin.com/in/hammadAsher100" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
             </div>
           </div>
           <div class="contact-item glass-card">
             <div class="contact-icon"><i class="fab fa-github"></i></div>
             <div>
               <strong>GitHub</strong>
-              <a href="https://github.com/" target="_blank" rel="noopener">View GitHub Profile</a>
+              <a href="https://github.com/hammadAsher100" target="_blank" rel="noopener noreferrer">View GitHub Profile</a>
             </div>
           </div>
         </div>
-        <form class="contact-form glass-card" id="contactForm">
+        <form class="contact-form glass-card" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
           <div class="form-group">
             <label for="formName">Your Name</label>
             <input type="text" id="formName" name="name" placeholder="John Doe" required />
@@ -544,13 +646,16 @@ me.say_hi()</code></pre>
           <span class="logo-bracket">&lt;</span>MHA<span class="logo-bracket"> /&gt;</span>
         </div>
         <div class="footer-socials">
-          <a href="tel:+923367599691" aria-label="Phone"><i class="fas fa-phone"></i></a>
-          <a href="mailto:hammadasher2@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://linkedin.com/in/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="tel:+923367599691" aria-label="Call phone number"><i class="fas fa-phone"></i></a>
+          <a href="mailto:hammadasher2@gmail.com" aria-label="Send email"><i class="fas fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/hammadAsher100" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/hammadAsher100" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
         </div>
         <p class="footer-text">
           Designed & Built by <strong>Muhammad Hammad Asher</strong>
+        </p>
+        <p class="footer-now">
+          📚 Currently: Diploma in AI & Data Science at SMIT
         </p>
         <p class="footer-copyright">
           &copy; <span id="currentYear"></span> All rights reserved. | Last updated: <span id="lastUpdated"></span>
@@ -560,7 +665,7 @@ me.say_hi()</code></pre>
   </footer>
 
   <!-- Back to Top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <button class="back-to-top" id="backToTop" aria-label="Back to top of page">
     <i class="fas fa-arrow-up"></i>
   </button>
 
