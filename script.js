@@ -139,29 +139,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Contact Form (Frontend-only) ----
+  // ---- Contact Form (Formspree Integration) ----
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('formName').value.trim();
-    const email = document.getElementById('formEmail').value.trim();
-    const message = document.getElementById('formMessage').value.trim();
+    // If using Formspree, let the form submit naturally
+    // Remove e.preventDefault() when Formspree is configured
+    const formAction = contactForm.getAttribute('action');
+    
+    if (!formAction || formAction.includes('YOUR_FORMSPREE_ID')) {
+      // Fallback for demo/testing
+      e.preventDefault();
+      const name = document.getElementById('formName').value.trim();
+      const email = document.getElementById('formEmail').value.trim();
+      const message = document.getElementById('formMessage').value.trim();
 
-    if (!name || !email || !message) {
-      showFormStatus('Please fill in all fields.', 'error');
-      return;
+      if (!name || !email || !message) {
+        showFormStatus('Please fill in all fields.', 'error');
+        return;
+      }
+
+      // Simulate sending
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+      setTimeout(() => {
+        showFormStatus('Message sent successfully! I\'ll get back to you soon. 🎉', 'success');
+        contactForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      }, 1500);
     }
-
-    // Simulate sending
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-    setTimeout(() => {
-      showFormStatus('Message sent successfully! I\'ll get back to you soon. 🎉', 'success');
-      contactForm.reset();
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-    }, 1500);
+    // If Formspree is configured, form will submit normally
   });
 
   function showFormStatus(msg, type) {
@@ -179,15 +187,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---- Download Resume ----
-  document.getElementById('downloadResume').addEventListener('click', (e) => {
-    e.preventDefault();
-    const link = document.createElement('a');
-    link.href = 'resume.pdf';
-    link.download = 'resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
+  const downloadResumeBtn = document.getElementById('downloadResume');
+  if (downloadResumeBtn) {
+    downloadResumeBtn.addEventListener('click', (e) => {
+      // If href is already set to resume.pdf, let it work naturally
+      // This handler is just for additional tracking if needed
+      console.log('Resume download initiated');
+    });
+  }
 
   // ---- Footer Date ----
   document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -239,4 +246,62 @@ document.addEventListener('DOMContentLoaded', () => {
   else timeGreeting = 'Hello';
 
   greeting.innerHTML = `<span class="greeting-wave">👋</span> ${timeGreeting}, I'm`;
+
+  // ---- Typing animation for hero role ----
+  const roles = [
+    'Software Engineering Student',
+    'AI & ML Enthusiast',
+    'Full-Stack Developer',
+    'Data Science Enthusiast'
+  ];
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typedRoleElement = document.getElementById('typedRole');
+  const typingSpeed = 100;
+  const deletingSpeed = 50;
+  const pauseTime = 2000;
+
+  function typeRole() {
+    const currentRole = roles[roleIndex];
+    
+    if (isDeleting) {
+      typedRoleElement.textContent = currentRole.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typedRoleElement.textContent = currentRole.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let speed = isDeleting ? deletingSpeed : typingSpeed;
+
+    if (!isDeleting && charIndex === currentRole.length) {
+      speed = pauseTime;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      speed = 500;
+    }
+
+    setTimeout(typeRole, speed);
+  }
+
+  // Start typing animation after a short delay
+  setTimeout(typeRole, 1000);
+
+  // ---- Skill Bar Animation ----
+  const skillBars = document.querySelectorAll('.skill-bar-fill');
+  const skillBarObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        const percent = target.getAttribute('data-percent');
+        target.style.width = percent + '%';
+        skillBarObserver.unobserve(target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  skillBars.forEach(bar => skillBarObserver.observe(bar));
 });
