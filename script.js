@@ -139,6 +139,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---- Toast Notification System ----
+  function showToast(message, type = 'success') {
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.innerHTML = `
+      <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+      <span>${message}</span>
+    `;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.classList.add('show'), 10);
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 300);
+    }, 3500);
+  }
+
   // ---- Contact Form (Formspree Integration) ----
   contactForm.addEventListener('submit', (e) => {
     // If using Formspree, let the form submit naturally
@@ -153,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = document.getElementById('formMessage').value.trim();
 
       if (!name || !email || !message) {
-        showFormStatus('Please fill in all fields.', 'error');
+        showToast('Please fill in all fields.', 'error');
         return;
       }
 
@@ -163,13 +179,17 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
       setTimeout(() => {
-        showFormStatus('Message sent successfully! I\'ll get back to you soon. 🎉', 'success');
+        showToast("Message sent! I'll get back to you soon.", 'success');
         contactForm.reset();
         submitBtn.disabled = false;
         submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
       }, 1500);
+    } else {
+      // Formspree is configured - show toast after submission
+      setTimeout(() => {
+        showToast("Message sent! I'll get back to you soon.", 'success');
+      }, 500);
     }
-    // If Formspree is configured, form will submit normally
   });
 
   function showFormStatus(msg, type) {
