@@ -250,9 +250,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Typing animation for hero role ----
   const roles = [
     'Software Engineering Student',
-    'AI & ML Enthusiast',
+    'AI/ML Engineer',
     'Full-Stack Developer',
-    'Data Science Enthusiast'
+    'MLOps Engineer'
   ];
   let roleIndex = 0;
   let charIndex = 0;

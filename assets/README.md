@@ -30,11 +30,12 @@
 
 Place project screenshots in the `projects/` subdirectory:
 
-1. **cinema-schedule.png** - Cinema Schedule Website screenshot
-2. **quiz-app.png** - C# Quiz Application screenshot
-3. **food-delivery.png** - Java Food Delivery Simulator screenshot
-4. **zipit-smart.png** - ZipIT-Smart ticketing system screenshot
-5. **weather-finance.png** - Weather & Finance ETL Dashboard screenshot
+1. **tartarus-engine.png** - Tartarus Dialectic Engine (Agentic AI system)
+2. **bank-mlops.png** - Bank Marketing MLOps Pipeline
+3. **hospital-hms.png** - MediCore Hospital Management System
+4. **weather-finance.png** - Weather & Finance ETL Dashboard
+5. **cinema-schedule.png** - Cinema Schedule Website
+6. **zipit-smart.png** - ZipIT-Smart ticketing system
 
 **Recommended size**: 800x500px or similar 16:10 aspect ratio
 **Format**: PNG or JPG
