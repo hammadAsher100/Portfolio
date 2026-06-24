@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
   const allNavLinks = document.querySelectorAll('.nav-link');
+  const heroContent = document.querySelector('.hero-content');
 
   // ---- Theme Toggle ----
   const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -43,6 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Back to top button
     backToTop.classList.toggle('visible', scrollY > 500);
+
+    if (heroContent) {
+      const fadeProgress = Math.min(scrollY / (window.innerHeight * 0.72), 1);
+      heroContent.style.opacity = String(1 - fadeProgress);
+      heroContent.style.transform = `translateY(${-scrollY * 0.08}px)`;
+    }
 
     lastScroll = scrollY;
   });
@@ -84,21 +91,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- Scroll Animations ----
   const animatedElements = document.querySelectorAll(
-    '.section-title, .about-description, .highlight-card, .info-card, ' +
+    '.section-title, .about-profile-photo, .github-stats, ' +
+    '.currently-learning, .fun-facts, .about-description, .highlight-card, .info-card, ' +
     '.timeline-item, .skill-category, .project-card, .certificate-card, ' +
     '.contact-item, .contact-form, .section-subtitle'
   );
 
-  animatedElements.forEach(el => el.classList.add('fade-in'));
+  animatedElements.forEach((el, index) => {
+    el.classList.add('fade-in');
+    el.style.transitionDelay = `${Math.min((index % 6) * 55, 275)}ms`;
+  });
 
   const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target);
+        entry.target.classList.remove('scroll-past');
+        if (!entry.target.classList.contains('reveal-settled')) {
+          window.setTimeout(() => {
+            entry.target.style.transitionDelay = '0ms';
+            entry.target.classList.add('reveal-settled');
+          }, 900);
+        }
+      } else {
+        entry.target.classList.remove('visible');
+        entry.target.classList.toggle('scroll-past', entry.boundingClientRect.top < 0);
       }
     });
-  }, { root: null, rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+  }, {
+    root: null,
+    rootMargin: '-8% 0px -12% 0px',
+    threshold: [0, 0.12, 0.35]
+  });
 
   animatedElements.forEach(el => fadeObserver.observe(el));
 
