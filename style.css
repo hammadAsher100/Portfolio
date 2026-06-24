@@ -1327,6 +1327,107 @@ ul { list-style: none; }
   letter-spacing: 0.2px;
 }
 
+/* Certificate Category Styles */
+.cert-category {
+  margin-bottom: 40px;
+}
+.cert-category-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cert-category-title i {
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+.cert-thumbnail {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background: var(--bg-primary);
+}
+.cert-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+.certificate-card:hover .cert-thumbnail img {
+  transform: scale(1.05);
+}
+.certificate-card.featured-cert {
+  border: 2px solid var(--accent);
+}
+.cert-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.certificate-card {
+  position: relative;
+}
+.certificate-card.featured-cert .cert-content {
+  padding: 0;
+}
+
+/* Skills Summary */
+.skills-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+.skill-summary-card {
+  padding: 28px;
+}
+.skill-summary-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.skill-summary-card h4 i {
+  color: var(--accent);
+}
+.skill-summary-card ul {
+  list-style: none;
+  padding: 0;
+}
+.skill-summary-card ul li {
+  padding: 8px 0;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 24px;
+}
+.skill-summary-card ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
 /* ============================
    CONTACT
    ============================ */
