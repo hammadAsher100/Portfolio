@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const animatedElements = document.querySelectorAll(
     '.section-title, .section-subtitle, .about-profile-photo, .currently-learning, .fun-facts, ' +
     '.about-description, .highlight-card, .info-card, .timeline-item, .skill-category, ' +
-    '.project-toolbar, .project-card, .tech-marquee, .github-card, .certificate-card, ' +
+    '.project-toolbar, .project-card, .tech-marquee, .certificate-card, ' +
     '.testimonial-card, .contact-item, .contact-form'
   );
 
@@ -162,29 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fills.forEach(fill => fillObserver.observe(fill));
   }
-
-  // ---- Animated Counters ----
-  const counters = document.querySelectorAll('[data-count]');
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const target = entry.target;
-      const end = Number(target.getAttribute('data-count')) || 0;
-      const duration = prefersReducedMotion ? 1 : 1100;
-      const startTime = performance.now();
-
-      function tick(now) {
-        const progress = Math.min((now - startTime) / duration, 1);
-        target.textContent = Math.floor(progress * end).toString();
-        if (progress < 1) requestAnimationFrame(tick);
-      }
-
-      requestAnimationFrame(tick);
-      counterObserver.unobserve(target);
-    });
-  }, { threshold: 0.4 });
-
-  counters.forEach(counter => counterObserver.observe(counter));
 
   // ---- Project Filtering and Search ----
   filterBtns.forEach(btn => {

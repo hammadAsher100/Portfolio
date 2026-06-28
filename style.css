@@ -1625,56 +1625,6 @@ ul { list-style: none; }
   to { transform: translateX(-50%); }
 }
 
-.github-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 24px;
-  margin-top: 40px;
-}
-.github-card {
-  padding: 28px;
-}
-.github-card h3 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 22px;
-}
-.github-card h3 i { color: var(--accent); }
-.github-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.github-metrics div {
-  padding: 16px 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: rgba(110, 198, 255, 0.07);
-  text-align: center;
-}
-.github-metrics strong {
-  display: block;
-  color: var(--accent-light);
-  font-size: 1.6rem;
-  font-family: var(--font-mono);
-}
-.github-metrics span {
-  color: var(--text-muted);
-  font-size: 0.78rem;
-}
-.github-embed-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.github-embed-card img {
-  width: 100%;
-  max-width: 560px;
-  border-radius: 8px;
-}
-
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2159,7 +2109,6 @@ ul { list-style: none; }
   .skills-grid { grid-template-columns: 1fr; }
   .skills-grid > :last-child { grid-column: auto; }
   .contact-grid { grid-template-columns: 1fr; }
-  .github-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   .nav-links {
@@ -2205,7 +2154,6 @@ ul { list-style: none; }
   .timeline { padding-left: 32px; }
   .timeline-marker { left: -32px; width: 28px; height: 28px; font-size: 0.7rem; }
   .timeline::before { left: 12px; }
-  .github-metrics { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
