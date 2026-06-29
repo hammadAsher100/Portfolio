@@ -15,8 +15,6 @@
 
 🌐 **Live Site**: [https://hammadasher100.github.io/Portfolio/](https://hammadasher100.github.io/Portfolio/)
 
-> **Status:** Code complete (91/100) — Ready for asset addition and deployment
-
 ---
 
 ## ✨ Features
