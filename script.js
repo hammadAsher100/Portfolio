@@ -382,31 +382,62 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---- Contact Form ----
-  contactForm?.addEventListener('submit', (event) => {
+  contactForm?.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Always prevent default form submission
+
     const formAction = contactForm.getAttribute('action') || '';
+    const name = document.getElementById('formName')?.value.trim();
+    const email = document.getElementById('formEmail')?.value.trim();
+    const subject = document.getElementById('formSubject')?.value.trim();
+    const message = document.getElementById('formMessage')?.value.trim();
+
+    if (!name || !email || !subject || !message) {
+      showToast('Please fill in all fields.', 'error');
+      return;
+    }
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
     if (!formAction || formAction.includes('YOUR_FORMSPREE_ID')) {
-      event.preventDefault();
-      const name = document.getElementById('formName')?.value.trim();
-      const email = document.getElementById('formEmail')?.value.trim();
-      const subject = document.getElementById('formSubject')?.value.trim();
-      const message = document.getElementById('formMessage')?.value.trim();
-
-      if (!name || !email || !subject || !message) {
-        showToast('Please fill in all fields.', 'error');
-        return;
-      }
-
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
+      // Fake submission for demo
       setTimeout(() => {
         showToast("Message ready. Configure Formspree to send it live.", 'success');
         contactForm.reset();
         submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        submitBtn.innerHTML = originalBtnText;
       }, 900);
+      return;
+    }
+
+    // Real AJAX submission
+    try {
+      const response = await fetch(formAction, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        showToast("Message sent successfully!", 'success');
+        contactForm.reset();
+      } else {
+        const data = await response.json();
+        if (Object.hasOwn(data, 'errors')) {
+          showToast(data.errors.map(error => error.message).join(', '), 'error');
+        } else {
+          showToast("Oops! There was a problem submitting your form", 'error');
+        }
+      }
+    } catch (error) {
+      showToast("Oops! There was a problem submitting your form", 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
     }
   });
 
