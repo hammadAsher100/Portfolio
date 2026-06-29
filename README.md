@@ -34,13 +34,6 @@
 
 ---
 
-## 📚 Documentation
-
-- **[TODO.md](TODO.md)** — 📋 Remaining tasks before launch
-- **[CHANGES.md](CHANGES.md)** — 📝 Change log and version history
-
----
-
 ## 🚀 Quick Start
 
 ### Prerequisites
